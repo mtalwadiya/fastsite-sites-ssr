@@ -26,7 +26,7 @@ function HomePage({sites}) {
 }
 
 // This gets called on every request
-export async function getServerSideProps({ query }) {
+export async function getStaticProps({ query }) {
   const astraClient = await createClient({
     astraDatabaseId: process.env.ASTRA_DB_ID,
     astraDatabaseRegion: process.env.ASTRA_DB_REGION,
